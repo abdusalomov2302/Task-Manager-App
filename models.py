@@ -23,5 +23,5 @@ tasks = Table(
     Column("id", Integer, primary_key=True),
     Column("name", String(128), unique=True, nullable=False),
     Column("description", Text, nullable=False, default=''),
-    Column("user_id", ForeignKey('users.id')),
+    Column("user_id", ForeignKey('users.id', ondelete='CASCADE')),
 )
